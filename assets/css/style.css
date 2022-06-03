@@ -1,1 +1,204 @@
+
+ :root {
+    --font-color-nav: black;
+    --font-color-main: #393c41;
+    --h2-color:#637378;
+    --bnt-dark: rgb(23,26, 32, 0.8);
+    --bnt-light: rgb(255, 255, 255, 0.65);
+    --font-bnt-dark:white;
+    --font-bnt-light:black;
+}
+
+body{
+   font-family: 'Noto Sans JP', sans-serif;
+   font-size: 15px;
+   margin: 0;
   
+   
+}
+
+nav{
+   display: flex;
+   justify-content: space-between;
+   height: 50px;
+   align-items: center;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+}
+
+nav ul, nav li{
+   list-style: none;
+}
+
+
+
+nav .logotesla{
+   width: 130px;
+   margin-left: 35px;
+}
+
+nav .middle ul{
+   display: flex;
+}
+
+nav .middle li{
+   margin: 0 20px;
+   
+}
+
+nav .middle a{
+   text-decoration: none;
+   color: var(--font-color-nav); 
+}
+
+nav .rightside ul{
+   display: flex;
+}
+
+nav .rightside li{
+   margin: 0 20px;
+}
+
+nav .rightside a{
+   color: var(--font-color-nav);
+   text-decoration: none;
+
+}
+
+/* Main */
+main{
+    background-image: url(https://tesla-cdn.thron.com/delivery/public/image/tesla/03e533bf-8b1d-463f-9813-9a597aafb280/bvlatuR/std/4096x2560/M3-Homepage-Desktop-LHD);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+main .info{
+    height: 45vh;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    flex-direction: column;
+}
+
+main h1{
+    font-size: 40px;
+    font-weight:  Normal;
+    margin: 0;
+    color: var(--font-color-main);
+}
+
+main h2{
+   margin: 0;
+   font-size: 14px;
+   font-weight: normal;
+   color: var(--h2-color);
+}
+
+main a{
+    color: var(--font-color-main);
+}
+
+
+/* Footer */
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 30px;
+    right: 0;
+}
+
+
+footer .bnt-area{
+    display: flex;
+    justify-content: center;
+}
+
+footer .bnt-area a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 220px;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 30px;
+    margin: 0 10px;
+    padding: 15px;
+
+}
+
+footer .bnt-dark{
+    
+    background-color: var( --bnt-dark);
+    color: var(--font-bnt-dark);
+    
+
+}
+
+footer .bnt-light{
+   background-color: var(--bnt-light);
+   color: var(--font-bnt-light);
+}
+
+footer .seta-area{
+   display: flex;
+   justify-content: center;
+   margin-top:40px;
+   height: 30px;
+   font-size: 30px;
+}
+
+@keyframes seta{
+   0%{
+       margin-top: 0px;
+   }
+   50%{
+       margin-top: 15px;
+   }
+
+   100%{
+       margin-top: 0px;
+   }
+}
+
+footer .seta{
+   cursor: pointer;
+   animation-name: seta;
+   animation-duration: 2s;
+   animation-iteration-count: infinite;
+   height: 15px;
+}
+
+
+/* Medias Queres*/
+@media (max-width:1100px ){
+
+   nav .middle{
+       display: none;
+   }
+   nav .rightside li{
+       display: none;
+   }
+
+   nav  .rightside ul li:nth-child(3){
+       display: block;
+   }
+
+}
+
+@media (max-width:550px)
+{
+   footer .bnt-area{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       margin: 20px 0;
+   }
+
+   footer .bnt-area a{
+       margin: 6px 20px;
+       width: calc(100vw - 60px);
+}
+}
